@@ -1,0 +1,186 @@
+body {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  background: url(media/sunny6.jpg) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+p {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+h1 {
+  font-size: 40px;
+  margin: 0;
+  font-family: "Merriweather Sans", sans-serif;
+}
+h2 {
+  font-size: 60px;
+  font-family: "Merriweather Sans", sans-serif;
+}
+.active {
+  font-weight: bold;
+}
+.border {
+  padding: 20px;
+  border-radius: 4px;
+}
+.btn-outline-light {
+  color: #0d6efd;
+  background: white;
+}
+.btn-outline-light:hover {
+  color: #0b5fd6;
+  border: 1px solid #0b5fd6;
+}
+.card-body {
+  padding: 0;
+  border-right: 1px solid rgba(255, 255, 255, 0.4);
+}
+.container {
+  max-width: 600px;
+}
+.container.search {
+  padding: 0;
+  margin-top: 60px;
+}
+.container.city-card {
+  margin-top: 10px;
+  margin-bottom: 40px;
+  padding: 0;
+  background: rgb(30, 132, 216, 0.3);
+}
+.day {
+  font-weight: bold;
+}
+.date {
+  margin: 10px;
+}
+.active a {
+  color: white !important;
+}
+a {
+  padding: 2px;
+  text-decoration: none;
+  color: white;
+}
+a:focus,
+a:hover {
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container.next-days {
+  margin-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+.next-days {
+  padding: 0;
+}
+.other-measurements {
+  list-style: none;
+  margin: 0 10px;
+  padding: 0;
+}
+.other-measurements li {
+  display: inline;
+  border-right: 1px solid white;
+  font-size: 12px;
+  padding: 0 10px;
+}
+.other-measurements li:last-of-type {
+  border-right: none;
+}
+.weather-description {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+.weather-description li {
+  font-size: 24px;
+  display: inline;
+}
+
+.row {
+  margin-top: 10px;
+}
+.small {
+  font-size: 12px;
+}
+.temperature-block {
+  margin: 20px 10px 0;
+}
+.temperature {
+  display: inline;
+  margin-left: 36px;
+}
+.units {
+  position: relative;
+  bottom: 34px;
+}
+@media (max-width: 576px) {
+  body {
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    background: url(media/sunny6.jpg) no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .border {
+    padding: 20px 20px 0 20px;
+    border-radius: 0;
+  }
+  .card-body {
+    padding: 10px 0;
+    border-right: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    position: relative;
+  }
+  .card-body p {
+    font-size: 14px;
+  }
+  .container.next-days {
+    margin-top: 0;
+    border: none;
+  }
+  .container.city-card {
+    background: rgb(30, 132, 216, 0.3);
+    color: white;
+    border: none;
+  }
+  .container.search {
+    padding: 0 10px;
+    margin: 40px 0 10px 0;
+  }
+  .day {
+    padding-left: 10px;
+    float: left;
+  }
+  .date {
+    margin-bottom: 30px;
+  }
+  .other-measurements li {
+    margin: 0;
+  }
+  .min-max {
+    float: right;
+    padding-right: 10px;
+  }
+  a {
+    color: white;
+  }
+  .weather-icon {
+    position: absolute;
+    margin-top: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
