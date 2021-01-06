@@ -60,6 +60,10 @@ h2 {
 .day {
   font-weight: bold;
 }
+#description {
+  position: relative;
+  right: 6px;
+}
 .footer-link {
   color: #0d6efd;
   text-decoration: none;
@@ -69,6 +73,10 @@ h2 {
   color: #0d6efd;
   cursor: pointer;
   font-weight: bold;
+}
+.icon img {
+  height: 70px;
+  width: 70px;
 }
 .next-days {
   padding: 0;
@@ -81,7 +89,7 @@ h2 {
 .other-measurements li {
   border-right: 1px solid white;
   display: inline;
-  font-size: 12px;
+  font-size: 16px;
   padding: 0 10px;
 }
 .other-measurements li:last-of-type {
