@@ -59,10 +59,11 @@ function inputCity(event) {
   let city = document.querySelector("#search-input").value;
   fetchCity(city);
 }
-let cityName = document.querySelector("#search-form");
-cityName.addEventListener("submit", inputCity);
 
 fetchCity("Amsterdam");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", inputCity);
 
 function showPosition(position) {
   let latitude = position.coords.latitude;
