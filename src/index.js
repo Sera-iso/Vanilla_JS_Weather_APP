@@ -62,21 +62,7 @@ function inputCity(event) {
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", inputCity);
 
-function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let apiKey = `9aec27109595b5fdde1289ca7baf818f`;
-  let metric = "metric";
-  let apiEndpoint = `https://api.openweathermap.org/data/2.5/weather`;
-  let url = `${apiEndpoint}?lat=${latitude}&lon=${longitude}&appId=${apiKey}&units=${metric}`;
-  axios.get(url).then(displayWeather);
-}
-function displayCurrentCityWeahter(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-let currentCity = document.querySelector("#current-city");
-currentCity.addEventListener("click", displayCurrentCityWeahter);
+fetchCity("Amsterdam");
 
 function convertToF(event) {
   event.preventDefault();
@@ -101,5 +87,3 @@ unitF.addEventListener("click", convertToF);
 
 let unitC = document.querySelector("#Celsius");
 unitC.addEventListener("click", convertToC);
-
-fetchCity("Amsterdam");
