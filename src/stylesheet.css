@@ -54,6 +54,11 @@ h2 {
   margin-top: 60px;
   padding: 0;
 }
+.container.temperature-block {
+  height: 66px;
+  margin-left: 34px;
+  margin-top: 10px;
+}
 .date {
   margin: 10px;
 }
@@ -95,33 +100,31 @@ h2 {
 .other-measurements li:last-of-type {
   border-right: none;
 }
-.row {
-  margin-top: 10px;
-}
 .small {
   font-size: 12px;
 }
 .temperature {
-  display: inline;
-  margin-left: 36px;
-}
-.temperature-block {
-  margin: 20px 10px 0;
+  text-align: right;
+  padding: 0;
 }
 .units {
-  bottom: 34px;
-  position: relative;
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
 }
-.unit-link {
+.units li {
+  display: inline;
+}
+.units a {
   color: white;
-  padding: 2px;
+  cursor: default;
   text-decoration: none;
 }
-.unit-link:focus,
-.unit-link:hover {
+.units a.active {
   color: white;
-  cursor: pointer;
+  cursor: default;
   font-weight: bold;
+  text-decoration: none;
 }
 .weather-description {
   list-style-type: none;

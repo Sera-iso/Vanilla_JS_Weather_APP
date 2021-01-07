@@ -48,29 +48,32 @@
     </div>
     <div class="container city-card">
       <div class="border">
-        <div class="temperature-block">
           <h1 id="city"></h1>
-          <h2 class="temperature" id="temp"></h2>
-          <span class="small units" id="units"
-            ><a href="#" class="unit-link" id="Celsius">°C</a>|<a
-              href="#"
-              class="unit-link"
-              id="Fahrenheit"
-              >°F</a
-            ></span
-          >
+          <div class="container temperature-block">
+          <div class="row">
+          <div class="col temperature">
+            <h2 id="temp"></h2>
+          </div>
+          <div class="col units">
+            <ul class="units small">
+              <li><a href="#" id="Celsius" class="active">°C</a></li>
+              <li>|</li>
+              <li><a href="#" id="Fahrenheit">°F</a></li>
+            </ul>
+          </div>
+          </div>
+          </div>
           <ul class="weather-description">
             <li class="icon"><img src="" id="icon"></li>
             <li id="description"></li>
           </ul>
-        </div>
-        <ul class="other-measurements">
+          <ul class="other-measurements">
           <li>Humidity: <span id="humidity"></span>%</li>
           <li>Wind: <span id="wind"></span>km/h</li>
-        </ul>
-        <p class="date">Last updated: <span id="date"></span></p>
-        <div class="container next-days">
-          <div class="row">
+          </ul>
+          <p class="date">Last updated: <span id="date"></span></p>
+          <div class="container next-days">
+          <div class="row next-days">
             <div class="col-sm-2 offset-sm-1 col-xs-12 next-days">
               <div class="card-body">
                 <p class="day">Mon</p>

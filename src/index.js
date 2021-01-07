@@ -44,24 +44,21 @@ function displayWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].main);
+  celsius = response.data.main.temp;
 }
 
 function fetchCity(city) {
-  let metric = "metric";
+  let metric = `metric`;
   let apiKey = `9aec27109595b5fdde1289ca7baf818f`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${metric}`;
 
   axios.get(apiUrl).then(displayWeather);
 }
-
 function inputCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value;
   fetchCity(city);
 }
-
-fetchCity("Amsterdam");
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", inputCity);
 
@@ -78,25 +75,31 @@ function displayCurrentCityWeahter(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(showPosition);
 }
-
 let currentCity = document.querySelector("#current-city");
 currentCity.addEventListener("click", displayCurrentCityWeahter);
 
 function convertToF(event) {
   event.preventDefault();
-  let celsius = 16;
-  let fahrenheit = Math.round((celsius * 9) / 5 + 32);
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${fahrenheit}`;
+  let temperatureElement = document.querySelector("#temp");
+  Celsius.classList.remove("active");
+  Fahrenheit.classList.add("active");
+  let fahrenheit = (celsius * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheit);
 }
+function convertToC(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+  Fahrenheit.classList.remove("active");
+  Celsius.classList.add("active");
+  temperatureElement.innerHTML = Math.round(celsius);
+}
+
+let celsius = null;
+
 let unitF = document.querySelector("#Fahrenheit");
 unitF.addEventListener("click", convertToF);
 
-function convertToC(event) {
-  event.preventDefault();
-  let celsius = 16;
-  let h2 = document.querySelector("h2");
-  h2.innerHTML = `${celsius}`;
-}
 let unitC = document.querySelector("#Celsius");
 unitC.addEventListener("click", convertToC);
+
+fetchCity("Amsterdam");
