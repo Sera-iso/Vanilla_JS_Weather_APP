@@ -10,7 +10,7 @@ body {
 }
 p {
   font-size: 14px;
-  margin-bottom: 6px;
+  margin-bottom: 20px;
 }
 h1 {
   font-family: "Merriweather Sans", sans-serif;
@@ -48,7 +48,7 @@ h2 {
 }
 .container.next-days {
   border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .container.search {
   margin-top: 60px;
@@ -56,13 +56,15 @@ h2 {
 }
 .container.temperature-block {
   height: 66px;
-  margin-top: 10px;
+  padding-left: 70px;
+  padding-right: 0;
 }
 .date {
   margin: 10px 0;
 }
-.day {
+.hours {
   font-weight: bold;
+  margin-bottom: 0;
 }
 #description {
   position: relative;
@@ -79,8 +81,13 @@ h2 {
   font-weight: bold;
 }
 .icon img {
-  height: 70px;
-  width: 70px;
+  bottom: 2px;
+  height: 60px;
+  position: relative;
+  width: 60px;
+}
+.min-max {
+  margin-bottom: 0;
 }
 .next-days {
   margin-top: 10px;
@@ -109,8 +116,10 @@ h2 {
 }
 .units {
   list-style-type: none;
-  padding: 0;
+  padding-left: 2px;
+  position: relative;
   text-align: left;
+  top: 4px;
 }
 .units li {
   display: inline;
@@ -154,7 +163,7 @@ h2 {
     border-right: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
-    padding: 10px 0;
+    height: 46px;
     position: relative;
   }
   .card-body p {
@@ -167,22 +176,22 @@ h2 {
   }
   .container.next-days {
     border: none;
-    margin-top: 0;
+    margin: 0 0 6px 0;
   }
   .container.search {
     margin: 40px 0 10px 0;
     padding: 0 10px;
   }
   .date {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
-  .day {
+  .hours {
     float: left;
-    padding-left: 10px;
+    padding: 14px 0 0 10px;
   }
   .min-max {
     float: right;
-    padding-right: 10px;
+    padding: 14px 10px 0 0;
   }
   .other-measurements li {
     margin: 0;
