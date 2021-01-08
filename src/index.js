@@ -1,5 +1,5 @@
 function formatDate(timestamp) {
-  let now = new Date();
+  let now = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -10,6 +10,11 @@ function formatDate(timestamp) {
     "Saturday",
   ];
   let day = days[now.getDay()];
+  return `${day} at ${formatHour(timestamp)}`;
+}
+
+function formatHour(timestamp) {
+  let now = new Date(timestamp);
   let hours = now.getHours();
   if (hours < 10) {
     hours = `0${hours}`;
@@ -18,7 +23,7 @@ function formatDate(timestamp) {
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
-  return `${day} at ${hours}:${minutes}`;
+  return `${hours}:${minutes}`;
 }
 
 function displayWeather(response) {
@@ -44,16 +49,44 @@ function displayWeather(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].main);
+
   celsius = response.data.main.temp;
+}
+
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
+  let forecast = null;
+
+  for (index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += ` 
+    <div class="col-sm-2 col-xs-12 next-days">
+      <div class="card-body border-end-0">
+        <p class="day">${formatHour(forecast.dt * 1000)}</p>
+        <img src="https://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }.png" class="icon">
+        <p class="min-max">${Math.round(
+          forecast.main.temp_max
+        )}° | ${Math.round(forecast.main.temp_min)}°</p>
+      </div>
+    </div>
+    `;
+  }
 }
 
 function fetchCity(city) {
   let metric = `metric`;
   let apiKey = `9aec27109595b5fdde1289ca7baf818f`;
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${metric}`;
-
   axios.get(apiUrl).then(displayWeather);
+
+  let apiKeyForecast = `9aec27109595b5fdde1289ca7baf818f`;
+  let apiUrlForecast = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKeyForecast}&units=${metric}`;
+  axios.get(apiUrlForecast).then(displayForecast);
 }
+
 function inputCity(event) {
   event.preventDefault();
   let city = document.querySelector("#search-input").value;
@@ -72,6 +105,7 @@ function convertToF(event) {
   let fahrenheit = (celsius * 9) / 5 + 32;
   temperatureElement.innerHTML = Math.round(fahrenheit);
 }
+
 function convertToC(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
