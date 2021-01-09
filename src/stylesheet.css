@@ -1,12 +1,6 @@
 body {
-  background: url(media/sunny6.jpg) no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   color: white;
   text-align: center;
-  text-shadow: 1px 1px 2px black;
 }
 p {
   font-size: 14px;
@@ -20,10 +14,6 @@ h1 {
 h2 {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 60px;
-}
-.border {
-  border-radius: 4px;
-  padding: 20px;
 }
 .btn-outline-light {
   background: white;
@@ -41,13 +31,12 @@ h2 {
   max-width: 600px;
 }
 .container.city-card {
-  background: rgb(30, 132, 216, 0.3);
   margin-top: 10px;
   margin-bottom: 40px;
-  padding: 0;
+  padding: 20px;
 }
 .container.next-days {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 20px;
 }
 .container.search {
@@ -73,7 +62,6 @@ h2 {
 .footer-link {
   color: #0d6efd;
   text-decoration: none;
-  text-shadow: none;
 }
 .footer-link:hover {
   color: #0d6efd;
@@ -145,20 +133,6 @@ h2 {
   font-size: 24px;
 }
 @media (max-width: 576px) {
-  body {
-    background: url(media/sunny6.jpg) no-repeat;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    color: white;
-    text-align: center;
-    text-shadow: 1px 1px 2px black;
-  }
-  .border {
-    border-radius: 0;
-    padding: 20px 20px 0 20px;
-  }
   .card-body {
     border-right: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -168,11 +142,6 @@ h2 {
   }
   .card-body p {
     font-size: 14px;
-  }
-  .container.city-card {
-    background: rgb(30, 132, 216, 0.3);
-    border: none;
-    color: white;
   }
   .container.next-days {
     border: none;

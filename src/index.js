@@ -121,3 +121,22 @@ unitF.addEventListener("click", convertToF);
 
 let unitC = document.querySelector("#Celsius");
 unitC.addEventListener("click", convertToC);
+
+let t = new Date().getHours();
+if (t < 16) {
+  document.body.style.backgroundImage = "url('src/media/morning.png')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+  document.getElementById("city-card").style.background =
+    "rgba(255, 255, 255, 0.1)";
+} else if (t < 20) {
+  document.body.style.backgroundImage = "url('src/media/evening.png')";
+  document.body.style.backgroundRepeat = "no-repeat";
+  document.body.style.backgroundSize = "cover";
+  document.getElementById("city-card").style.background =
+    "rgba(0, 101, 128, 0.1)";
+} else {
+  document.body.style.backgroundImage = "url('src/media/night.png')";
+  document.getElementById("city-card").style.background =
+    "rgba(96, 132, 255, 0.1)";
+}

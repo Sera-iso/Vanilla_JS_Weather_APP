@@ -40,35 +40,33 @@
         <input type="submit" class="btn btn-primary" value="Search" />
       </form>
     </div>
-    <div class="container city-card">
-      <div class="border">
-          <h1 id="city"></h1>
-          <div class="container temperature-block">
-          <div class="row">
-          <div class="col temperature">
-            <h2 id="temp"></h2>
-          </div>
-          <div class="col units">
-            <ul class="units small">
-              <li><a href="#" id="Celsius" class="active">°C</a></li>
-              <li>|</li>
-              <li><a href="#" id="Fahrenheit">°F</a></li>
-            </ul>
-          </div>
-          </div>
-          </div>
-          <ul class="weather-description">
-            <li class="icon"><img src="" id="icon"></li>
-            <li id="description"></li>
-          </ul>
-          <ul class="other-measurements">
-          <li>Humidity: <span id="humidity"></span>%</li>
-          <li>Wind: <span id="wind"></span>km/h</li>
-          </ul>
-          <p class="date">Last updated: <span id="date"></span></p>
-          <div class="container next-days">
-            <div class="row next-days" id="forecast">
-            </div>
+    <div class="container city-card" id="city-card">
+      <h1 id="city"></h1>
+      <div class="container temperature-block">
+      <div class="row">
+      <div class="col temperature">
+        <h2 id="temp"></h2>
+      </div>
+      <div class="col units">
+        <ul class="units small">
+          <li><a href="#" id="Celsius" class="active">°C</a></li>
+          <li>|</li>
+          <li><a href="#" id="Fahrenheit">°F</a></li>
+        </ul>
+      </div>
+      </div>
+      </div>
+      <ul class="weather-description">
+        <li class="icon"><img src="" id="icon"></li>
+        <li id="description"></li>
+      </ul>
+      <ul class="other-measurements">
+      <li>Humidity: <span id="humidity"></span>%</li>
+      <li>Wind: <span id="wind"></span>km/h</li>
+      </ul>
+      <p class="date">Last updated: <span id="date"></span></p>
+      <div class="container next-days">
+        <div class="row next-days" id="forecast">
         </div>
       </div>
     </div>
