@@ -27,34 +27,34 @@ function formatHour(timestamp) {
 }
 
 function displayWeather(response) {
-  document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temp").innerHTML = Math.round(
+  document.getElementById("city").innerHTML = response.data.name;
+  document.getElementById("temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
-  document.querySelector("#wind").innerHTML = Math.round(
+  document.getElementById("humidity").innerHTML = response.data.main.humidity;
+  document.getElementById("wind").innerHTML = Math.round(
     response.data.wind.speed
   );
-  document.querySelector("#description").innerHTML =
+  document.getElementById("description").innerHTML =
     response.data.weather[0].main;
-  document.querySelector("#date").innerHTML = formatDate(
+  document.getElementById("date").innerHTML = formatDate(
     response.data.dt * 1000
   );
   document
-    .querySelector("#icon")
+    .getElementById("icon")
     .setAttribute(
       "src",
       `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`
     );
   document
-    .querySelector("#icon")
+    .getElementById("icon")
     .setAttribute("alt", response.data.weather[0].main);
 
   celsius = response.data.main.temp;
 }
 
 function displayForecast(response) {
-  let forecastElement = document.querySelector("#forecast");
+  let forecastElement = document.getElementById("forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
 
@@ -89,17 +89,17 @@ function fetchCity(city) {
 
 function inputCity(event) {
   event.preventDefault();
-  let city = document.querySelector("#search-input").value;
+  let city = document.getElementById("search-input").value;
   fetchCity(city);
 }
-let form = document.querySelector("#search-form");
+let form = document.getElementById("search-form");
 form.addEventListener("submit", inputCity);
 
 fetchCity("Amsterdam");
 
 function convertToF(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
+  let temperatureElement = document.getElementById("temp");
   Celsius.classList.remove("active");
   Fahrenheit.classList.add("active");
   let fahrenheit = (celsius * 9) / 5 + 32;
@@ -108,7 +108,7 @@ function convertToF(event) {
 
 function convertToC(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temp");
+  let temperatureElement = document.getElementById("temp");
   Fahrenheit.classList.remove("active");
   Celsius.classList.add("active");
   temperatureElement.innerHTML = Math.round(celsius);
@@ -116,10 +116,10 @@ function convertToC(event) {
 
 let celsius = null;
 
-let unitF = document.querySelector("#Fahrenheit");
+let unitF = document.getElementById("Fahrenheit");
 unitF.addEventListener("click", convertToF);
 
-let unitC = document.querySelector("#Celsius");
+let unitC = document.getElementById("Celsius");
 unitC.addEventListener("click", convertToC);
 
 let t = new Date().getHours();
