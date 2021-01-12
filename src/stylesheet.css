@@ -123,6 +123,9 @@ h2 {
   font-weight: bold;
   text-decoration: none;
 }
+.units a:hover {
+  cursor: pointer;
+}
 .weather-description {
   list-style-type: none;
   margin: 0;
