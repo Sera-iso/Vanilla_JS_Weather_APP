@@ -15,37 +15,6 @@ This Weather APP is the final project I delivered after attending the Front-End 
 
 Try it yourself at https://gracious-johnson-3440af.netlify.app/
 
-# How does the code look like?
-
-Sneak peak: temperature conversion (Celsius to Fahrenheit and viceversa)
-
-```
-function convertToF(event) {
-  event.preventDefault();
-  let temperatureElement = document.getElementById("temp");
-  Celsius.classList.remove("active");
-  Fahrenheit.classList.add("active");
-  let fahrenheit = (celsius * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheit);
-}
-
-function convertToC(event) {
-  event.preventDefault();
-  let temperatureElement = document.getElementById("temp");
-  Fahrenheit.classList.remove("active");
-  Celsius.classList.add("active");
-  temperatureElement.innerHTML = Math.round(celsius);
-}
-
-let celsius = null;
-
-let unitF = document.getElementById("Fahrenheit");
-unitF.addEventListener("click", convertToF);
-
-let unitC = document.getElementById("Celsius");
-unitC.addEventListener("click", convertToC);
-```
-
 # Credits
 
 * Weather data is provided by www.openweathermap.org
