@@ -50,7 +50,7 @@ unitC.addEventListener("click", convertToC);
 
 * Weather data is provided by www.openweathermap.org
 * Request to API made via https://github.com/axios/axios
-* Reviews and guardian angels behind the scenes are the awesome folks of www.shecodes.io
+* Reviews and guardian angels behind the scenes are the folks of www.shecodes.io and my mentor Carlos Crespo
 
 
 
