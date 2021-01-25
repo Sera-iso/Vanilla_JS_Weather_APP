@@ -1,4 +1,4 @@
-# Weather APP
+# Vanilla JS Weather APP
 
 Weather APP built in HTML, CSS and vanilla Javascript.   
 This Weather APP is the final project I delivered after attending the Front-End development course @SheCodes. 
