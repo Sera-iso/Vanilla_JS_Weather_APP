@@ -137,6 +137,9 @@ h2 {
   font-size: 24px;
 }
 @media (max-width: 576px) {
+  body {
+    margin-top: 60px;
+  }
   .card-body {
     border-right: none;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
